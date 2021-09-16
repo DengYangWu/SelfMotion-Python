@@ -1,0 +1,54 @@
+- dev: 华为mate30
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.107:5556
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: true
+    udid: 192.168.1.107:5556
+    port: 55560
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+- dev: 华为9a
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.113:5558
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: true
+    udid: 192.168.1.113:5558
+    port: 55570
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+- dev: oppoA5
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.100:5557
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: true
+    udid: 192.168.1.100:5557
+    port: 55580
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+    automationName: UiAutomator1  #oppo手机比较特殊，需添加UiAutomator1驱动
+
+#- desc: 设备名称_雷电,appium启动服务端口号_4723
+#  port: 4730
+#  desired_caps:
+#    platformName: Android
+#    deviceName: emulator-5554
+#    appPackage: com.taobao.taobao
+#    noReset:  !!bool True
+#    udid: emulator-5554
+#    appActivity: com.taobao.tao.welcome.Welcome
+#
+#- desc: 设备名称_夜神,appium启动服务端口号_4724
+#  port: 4740
+#  desired_caps:
+#    platformName: Android
+#    deviceName: 127.0.0.1:62001
+#    appPackage: com.taobao.taobao
+#    noReset:  !!bool True
+#    udid: 127.0.0.1:62001
+#    appActivity: com.taobao.tao.welcome.Welcome

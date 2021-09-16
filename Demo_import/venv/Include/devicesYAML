@@ -1,0 +1,81 @@
+- dev: 华为mate30
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.107:5556
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: True
+    udid: 192.168.1.107:5556
+    port: 55560
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+    automationName: Uiautomator1
+    #automationName: UiAutomator2
+    noSign: True
+    newCommandTimeout: 600
+- dev: 华为note8
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.110:5558
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: true
+    udid: 192.168.1.110:5558
+    port: 55570
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+    #simpleIsVisibleCheck: true
+    #useJSONSource: true
+    #waitForQuiescence: false
+    automationName: UiAutomator  #oppo手机比较特殊，需添加UiAutomator1驱动
+    newCommandTimeout: 600
+- dev: 华为9a
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.105:5556
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: True
+    udid: 192.168.1.105:5556
+    port: 55580
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+    automationName: Uiautomator1
+    #automationName: UiAutomator2
+    noSign: True
+    newCommandTimeout: 600
+
+- dev: 华为mate9
+  caps:
+    platformName: Android
+    deviceName: 192.168.1.115:5559
+    appPackage: cn.butel.redmeeting
+    appActivity: cn.butel.redmeeting.boot.SplashActivity
+    noReset: True
+    udid: 192.168.1.115:5559
+    port: 55580
+    skipServerInstallation: true
+    skipDeviceInitialization: true
+    automationName: Uiautomator1
+    #automationName: UiAutomator2
+    noSign: True
+    newCommandTimeout: 600
+#- desc: 设备名称_雷电,appium启动服务端口号_4723
+#  port: 4730
+#  desired_caps:
+#    platformName: Android
+#    deviceName: emulator-5554
+#    appPackage: com.taobao.taobao
+#    noReset:  !!bool True
+#    udid: emulator-5554
+#    appActivity: com.taobao.tao.welcome.Welcome
+#
+#- desc: 设备名称_夜神,appium启动服务端口号_4724
+#  port: 4740
+#  desired_caps:
+#    platformName: Android
+#    deviceName: 127.0.0.1:62001
+#    appPackage: com.taobao.taobao
+#    noReset:  !!bool True
+#    udid: 127.0.0.1:62001
+#    appActivity: com.taobao.tao.welcome.Welcome
