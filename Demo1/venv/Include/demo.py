@@ -4,7 +4,7 @@ import multiprocessing
 from appium import webdriver
 class ConcurrentExecution:
     def __init__(self):
-        self.driver_port = [[55560,"192.168.1.107:5556"],[55580,"192.168.1.100:5557"],[55570,"192.168.1.113:5558"]]
+        self.driver_port = [[55560,"192.168.1.107:5556"],[55580,"192.168.1.100:5557"],[4723,"192.168.1.112:5001"]]
 
     def android_driver(self,i):
         driver_list = []

@@ -1,7 +1,7 @@
 - dev: 华为mate30
   caps:
     platformName: Android
-    deviceName: 192.168.1.107:5556
+    deviceName: 192.168.1.112:5001
     appPackage: cn.butel.redmeeting
     appActivity: cn.butel.redmeeting.boot.SplashActivity
     noReset: True
@@ -32,18 +32,22 @@
 - dev: 华为9a
   caps:
     platformName: Android
-    deviceName: 192.168.1.105:5556
+    deviceName: 192.168.1.100:5000
     appPackage: cn.butel.redmeeting
+    #appPackage: demo.com.butel.redmeeting
     appActivity: cn.butel.redmeeting.boot.SplashActivity
-    noReset: True
-    udid: 192.168.1.105:5556
-    port: 55580
+    #appActivity: demo.com.butel.redmeeting.MainActivity
+    unicodeKeyboard: true
+    resetKeyboard: true
+    udid: 192.168.1.100:5000
+    port: 4723
     skipServerInstallation: true
     skipDeviceInitialization: true
     automationName: Uiautomator1
-    #automationName: UiAutomator2
-    noSign: True
+    #automationName: Uiautomator2
+    #noSign: True
     newCommandTimeout: 600
+    noReset: True
 
 - dev: 华为mate9
   caps:
@@ -52,12 +56,12 @@
     appPackage: cn.butel.redmeeting
     appActivity: cn.butel.redmeeting.boot.SplashActivity
     noReset: True
-    udid: 192.168.1.115:5559
+    udid: 192.168.1.103:5000
     port: 55580
     skipServerInstallation: true
     skipDeviceInitialization: true
-    automationName: Uiautomator1
-    #automationName: UiAutomator2
+    #automationName: Uiautomator1
+    automationName: Uiautomator2
     noSign: True
     newCommandTimeout: 600
 #- desc: 设备名称_雷电,appium启动服务端口号_4723
