@@ -9,7 +9,7 @@ import urllib.request
 # import xml.etree.ElementTree
 
 #url = 'C:/Users/butel/Desktop/xml/'  # 你的xml文件的路經，注意最后一定要有'/'
-tree = ET.ElementTree(file='strings.xml')
+tree = ET.ElementTree(file='strings (1).xml')
 root = tree.getroot()
 for elem in tree.iter(tag='string'):
     elem.text=str(1)

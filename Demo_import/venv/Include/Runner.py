@@ -4,17 +4,16 @@ import sys
 import os
 from appium import webdriver
 import time
-import yaml
 import threading
 import config.join_meeting,config.log_out,config.log_in,config.exit_meeting
 import Include.log_main,Include.location_toast,Include.TurnOn_Camera_TurnOff,Include.Demo_login
+import SDK.initialize_sdk,SDK.join_meeting_SDK,SDK.exit_meeting,SDK.operation_video,SDK.meeting_being,SDK.main_page_function
 
 import HTMLTestRunner
 #多进程工具包  与threading类似
 import multiprocessing
 from selenium.common.exceptions import NoSuchElementException
 from appium.webdriver.common.touch_action import TouchAction
-
 import subprocess
 
 def appium_start(port,udid):
@@ -47,13 +46,48 @@ def dev_caps(deviceName):
             appium_start(port=i['caps']['port'],udid=i['caps']['udid'])
             driver = webdriver.Remote('http://127.0.0.1:' + str(i['caps']['port']) + '/wd/hub',i['caps'])
             driver.implicitly_wait(10)
-            time.sleep(5)
-            
+            time.sleep(10)
+
+
             #Include.log_main.run_app(deviceName,driver)
             try:
-                #Include.location_toast.laction_toast_Demo(driver)
-                Include.Demo_login.login_circulation(driver)
+                print("START ACTION!!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+                #SDK.initialize_sdk.init(driver)
+                #SDK.operation_video.close_video(driver)
+                #会议内操作
+                # SDK.join_meeting_SDK.Join_meeting(driver)
+
+                # a = SDK.meeting_being.method()
+                # a.open_video(driver)
+                # a.close_video(driver)
+                # a.close_voice(driver)
+                # a.open_voice(driver)
+                # a.share_desktop_open(driver)
+                # a.share_desktop_close(driver)
+                # a.share_whiteboard_open(driver)
+                # a.share_whiteboard_close(driver)
+                # a.meeting_list(driver)
+                # a.meeting_list_openvideo(driver)
+                # a.meeting_list_closevideo(driver)
+                # a.meeting_list_openvoice(driver)
+                # a.meeting_list_closevoice(driver)
+                # a.meeting_list_raisehands(driver)
+                # a.meeting_list_downhands(driver)
+                # a.meeting_list_hide(driver)
+                # a.raise_hands(driver)
+                # a.down_hands(driver)
+                #a.chat(driver)
+                #SDK.exit_meeting.exit_meeting(driver)
+
+                #会外设置水印
+                #b = SDK.main_page_function.method()
+                #b.watermark(driver)
+                #SDK.join_meeting_SDK.Join_meeting(driver)
+                Include.location_toast.laction_toast_Demo(driver)
+                #Include.Demo_login.login_circulation(driver)
                 #driver.find_element_by_id("cn.butel.redmeeting:id/head_iv").click()
+                print("End ACTION!!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             except Exception as e:
                 print(e)
 

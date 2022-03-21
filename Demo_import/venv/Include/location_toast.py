@@ -15,14 +15,29 @@ from selenium.common.exceptions import NoSuchElementException
 from appium.webdriver.common.touch_action import TouchAction
 #元素等待
 from selenium.webdriver.support.ui import WebDriverWait
+import os
 
+import logging
+from appium import webdriver
+from appium.webdriver.common.mobileby import MobileBy
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+from appium.webdriver.common.touch_action import TouchAction
+from selenium.webdriver.common.by import By
 #定位toast提示
 def laction_toast_Demo(driver):
-    #print(driver)
-    driver.find_element_by_id("cn.butel.redmeeting:id/head_iv").click()
-    driver.find_element_by_id("cn.butel.redmeeting:id/gotomyfilecard_rl").click()
-    driver.find_element_by_id("cn.butel.redmeeting:id/name_rl").click()
-    driver.find_element_by_id("cn.butel.redmeeting:id/save_btn").click()
+    print(driver)
+
+    driver.find_element_by_id("cn.butel.redmeeting:id/login_pwd_ed").send_keys(1)
+    driver.find_element_by_id("cn.butel.redmeeting:id/login_title").click()
+    #time.sleep(2)
+    driver.find_element_by_id("cn.butel.redmeeting:id/login_btn").click()
+    toastmessage = "账号或密码错误"
+    toast_loc = './/*[android.widget.FrameLayout(@text,"账号或密码错误")]'
+    toast = WebDriverWait(driver, 5, 0.1).until(EC.presence_of_element_located((MobileBy.XPATH,toast_loc)))
+    print(driver.find_element_by_xpath(toast).text)
+    # driver.find_element_by_id("cn.butel.redmeeting:id/name_rl").click()
+    # driver.find_element_by_id("cn.butel.redmeeting:id/save_btn").click()
     #toast_message = "参会名称修改成功";
     #message ='//*[@class=\'{}\']'.format(toast_message)
     #toast_element = driver.find_element_by_xpath("//*[@id='cn.butel.redmeeting.util.CustomToast']")
